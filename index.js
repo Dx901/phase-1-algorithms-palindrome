@@ -1,12 +1,19 @@
-function reverse(word){
-  const wordArray=word.split('')
-  const reverseWordArray = wordArray.reverse('')
-  const reverseword = reverseWordArray.join("")
-  return reverseword
+
+function reverseString(word) {
+
+  return word.split('').reverse().join('')
+  
 }
 
 
 function isPalindrome(word) {
+
+  const reversedWord = reverseString(word)
+  if (word === reversedWord) {
+    return word === reversedWord
+  }
+
+  /**
   // Write your algorithm here
   const reverseword = reverse(word)
   if (word === reverseword) {
@@ -17,14 +24,24 @@ function isPalindrome(word) {
   }
 }
 console.log(isPalindrome('roro'))
+*/
+}
 
 /* 
   Add your pseudocode here
+  first create a function that reversee the string then
   create a function isPalindrome("string");
   if string === isPalindrome;
   return true
   else 
   return false
+
+  //Here is the guided pseudoCode
+  reverse the input string
+  if the reversed string is the same as the input
+    return true
+  else 
+    return false 
 */
 
 /*
