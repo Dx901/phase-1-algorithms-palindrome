@@ -1,3 +1,4 @@
+const { expect } = require("chai");
 const chai = require("chai");
 global.expect = chai.expect;
 const isPalindrome = require("../index");
@@ -18,4 +19,18 @@ describe("isPalindrome", () => {
   it("returns false for 'ab'", () => {
     expect(isPalindrome("ab")).to.be.false;
   });
+  it("returns true for 'madam'", () => {
+    expect(isPalindrome("madam")).to.be.true;
+  })
+  it ("returns flase for for 'dyes'", () => {
+    expect(isPalindrome('dyes')).to.be.false
+  }) 
 });
+
+
+/**
+ 
+
+
+ 
+ */
