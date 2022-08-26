@@ -1,8 +1,17 @@
+/*function reverse(word){
+  //const wordArray=word.split('')
+  const reverseWord = wordArray.reverse('')
+  const reverseword = reverseWord.join("")
+  return reverseword
+}*/
 
 function reverseString(word) {
 
-  return word.split('').reverse().join('')
-  
+  return word.split('').reverse.join('')
+  /* const wordArray = word.split('')
+  const reversedWordArray = wordArray.reverse('')
+  const reversedWord = reversedWordArray.join('')
+  return reversedWord*/
 }
 
 
@@ -51,6 +60,7 @@ console.log(isPalindrome('roro'))
   //this function takes in a string aregument
   //If this  string reads same way backwards as it did forward
   //Then this function should return true otherwise false
+  //THE COMMENTED CODE IS MY CODE
 */
 
 // You can run `node index.js` to view these console logs
