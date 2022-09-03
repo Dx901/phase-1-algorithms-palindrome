@@ -1,66 +1,28 @@
-/*function reverse(word){
-  //const wordArray=word.split('')
-  const reverseWord = wordArray.reverse('')
-  const reverseword = reverseWord.join("")
-  return reverseword
-}*/
-
-function reverseString(word) {
-
-  return word.split('').reverse.join('')
-  /* const wordArray = word.split('')
-  const reversedWordArray = wordArray.reverse('')
-  const reversedWord = reversedWordArray.join('')
-  return reversedWord*/
-}
-
 
 function isPalindrome(word) {
-
-  const reversedWord = reverseString(word)
-  if (word === reversedWord) {
-    return word === reversedWord
+  for (let i = 0; i < word.length / 2; i++){
+    const j = word.length -1 -i;
+    if (word[i] !== word[j]) {
+      //if those leetrs do nt match return false
+      return false;
+    }
   }
-
-  /**
-  // Write your algorithm here
-  const reverseword = reverse(word)
-  if (word === reverseword) {
-    return true
-  }
-  else{
-    return false
-  }
-}
-console.log(isPalindrome('roro'))
-*/
+  
+  return true;
 }
 
 /* 
   Add your pseudocode here
-  first create a function that reversee the string then
-  create a function isPalindrome("string");
-  if string === isPalindrome;
-  return true
-  else 
-  return false
+iterate from the beginning of the string to the middle of the string
+  compare the letter we're iterating over to the corresponding letter at the end of the string
+    if the letters don't match, return false
 
-  //Here is the guided pseudoCode
-  reverse the input string
-  if the reversed string is the same as the input
-    return true
-  else 
-    return false 
-*/
+if we reach the middle, and all the letters match, return true
+  */
+
 
 /*
   Add written explanation of your solution here
-
-  //You create a function to know if a string is a palindrome
-  //this function takes in a string aregument
-  //If this  string reads same way backwards as it did forward
-  //Then this function should return true otherwise false
-  //THE COMMENTED CODE IS MY CODE
 */
 
 // You can run `node index.js` to view these console logs
@@ -76,3 +38,44 @@ if (require.main === module) {
 }
 
 module.exports = isPalindrome;
+/*
+isPalindrome = (string) => {
+  var reg = /[\W_]/g
+
+  var smallstr = string.toLowerCase().replace(reg, '')
+
+  var reversed = smallstr.split('').reverse().join('')
+  if (reversed === smallstr) {return true
+  }else {
+    return false
+  }
+}
+console.log(isPalindrome('robot'))
+
+
+  /**
+  
+
+}
+
+/* 
+  Add your pseudocode here
+  Using a for loop
+  compare the first character with the last character
+  In every iterartion we move closer to the center of the string
+  If we reach the middle successfully and all characters are equal
+  then it is a palindrome
+
+  //Here is the guided pseudoCode
+  Iterate through a string
+  if letters match from both ends return true 
+*/
+
+/*
+  Add written explanation of your solution here
+
+  //using a for loop you iterarye through a string
+  //If the characters match then return true
+  //Otherwise return false
+
+*/
